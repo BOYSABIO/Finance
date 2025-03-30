@@ -23,6 +23,18 @@ def budgeting(income, expense):
     dict = finance(total, grocery, fast_food, total_food, subscriptions_total, investment_style)
     
     s = pd.Series(dict)
+    portioning = s[0:4]
+    savings_subs = s.iloc[4:8]
+    investing = s.iloc[8:15]
+    fun = s.iloc[15]
+
+    grocery_per_week = round((grocery / 4), 2)
+    grocery_per_day = round((grocery / days_in_month), 3)
+
+    num_ff_deliveries_under_20 = round(ff_days)
+    every_x_days_ff_under_20 = round((days_in_month / ff_days), 3)
+
+    return portioning, savings_subs, investing, fun, grocery_per_week, grocery_per_day, num_ff_deliveries_under_20, every_x_days_ff_under_20
 
 def basic_needs(total):
     grocery = (total * 0.075) * 4
