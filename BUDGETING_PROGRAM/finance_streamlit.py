@@ -8,7 +8,7 @@ st.set_page_config(
 )
 
 # Tab Organization
-home_tab, General_tab, Money_tab, Rebalancing_tab = st.tabs(['Home', 'General', 'Money', 'Rebalancing'])
+home_tab, Budgeting_money_check, Rebalancing_tab = st.tabs(['Home', 'Budgeting', 'Rebalancing'])
 
 with home_tab:
     st.title("Finance Application")
@@ -16,16 +16,11 @@ with home_tab:
     st.write("Here is text")
     st.text("Here is text")
 
-with General_tab:
+with Budgeting_money_check:
     st.title("General")
     st.subheader("Here is a subheader if needed")
     st.write("Here is text")
     st.text("Here is text")
 
-with Money_tab:
-    st.title("Money")
-
 with Rebalancing_tab:
     st.title("Rebalancing")
-
-
