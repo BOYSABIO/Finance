@@ -7,6 +7,8 @@ st.set_page_config(
     layout = "wide"
 )
 
+st.sidebar.title("Sidebar")
+
 # Tab Organization
 home_tab, Budgeting_money_check, Rebalancing_tab = st.tabs(['Home', 'Budgeting', 'Rebalancing'])
 
